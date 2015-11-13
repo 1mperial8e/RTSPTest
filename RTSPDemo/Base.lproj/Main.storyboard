@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E26a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="CoS-CE-vwB">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <scenes>
+        <!--Demo RTSP-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="MainViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="yVN-Kb-W0O"/>
+                        <viewControllerLayoutGuide type="bottom" id="ZDL-oP-qch"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="cYA-y6-c35">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" keyboardDismissMode="interactive" translatesAutoresizingMaskIntoConstraints="NO" id="mva-4N-u0m">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HJA-5n-4Ac">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="523"/>
+                                        <subviews>
+                                            <textField hidden="YES" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="rtsp://media1.law.harvard.edu/Media/policy_a/2012/02/02_unger.mov" borderStyle="roundedRect" placeholder="Put rtsp Link Here" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Pto-PO-fLI">
+                                                <rect key="frame" x="16" y="417" width="568" height="30"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="30" id="tgK-yz-801"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                                <connections>
+                                                    <outlet property="delegate" destination="BYZ-38-t0r" id="zwN-Ur-4vF"/>
+                                                </connections>
+                                            </textField>
+                                            <textView hidden="YES" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IxP-IK-rXe">
+                                                <rect key="frame" x="16" y="101" width="568" height="300"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="300" id="foD-Oq-vyJ"/>
+                                                </constraints>
+                                                <string key="text">rtsp://media1.law.harvard.edu/Media/policy_a/2012/02/02_unger.mov
+rtsp://184.72.239.149/vod/mp4:BigBuckBunny_175k.mov/
+rtsp://wowzaec2demo.streamlock.net/vod/mp4:BigBuckBunny_115k.mov
+rtsp://192.168.1.168:8556/PSIA/Streaming/channels/2?videoCodecType=H.264
+rtsp://192.168.1.168:8556/PSIA/Streaming/channels/2?videoCodecType=H.264
+rtsp://192.168.1.168:8557/PSIA/Streaming/channels/2?videoCodecType=H.264</string>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select one of the link or insert you own:" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="VjQ-Vq-Juk">
+                                                <rect key="frame" x="16" y="72" width="568" height="21"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="21" id="rLF-E9-NLb"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ygk-kg-fuS">
+                                                <rect key="frame" x="148" y="150" width="304" height="30"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="30" id="RJo-4g-qeL"/>
+                                                </constraints>
+                                                <state key="normal" title="Play RTSP - rtsp://192.168.1.168:8557/PSIA">
+                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <segue destination="bfT-tc-ZZ5" kind="show" identifier="rtsp7" id="CbA-bg-0jt"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b88-wb-CFb">
+                                                <rect key="frame" x="148" y="200" width="304" height="30"/>
+                                                <state key="normal" title="Play RTSP - rtsp://192.168.1.168:8556/PSIA">
+                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <segue destination="bfT-tc-ZZ5" kind="show" identifier="rtsp6" id="oCa-aV-vPy"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstItem="Pto-PO-fLI" firstAttribute="leading" secondItem="HJA-5n-4Ac" secondAttribute="leading" constant="16" id="1AL-HA-d8N"/>
+                                            <constraint firstAttribute="centerX" secondItem="Ygk-kg-fuS" secondAttribute="centerX" id="21u-u7-7rH"/>
+                                            <constraint firstItem="b88-wb-CFb" firstAttribute="top" secondItem="Ygk-kg-fuS" secondAttribute="bottom" constant="20" id="3S5-m6-L8c"/>
+                                            <constraint firstItem="VjQ-Vq-Juk" firstAttribute="leading" secondItem="HJA-5n-4Ac" secondAttribute="leading" constant="16" id="6dW-Xu-lSE"/>
+                                            <constraint firstItem="b88-wb-CFb" firstAttribute="leading" secondItem="Ygk-kg-fuS" secondAttribute="leading" id="6eB-kv-hf3"/>
+                                            <constraint firstAttribute="trailing" secondItem="IxP-IK-rXe" secondAttribute="trailing" constant="16" id="Dly-ng-MnT"/>
+                                            <constraint firstItem="IxP-IK-rXe" firstAttribute="top" secondItem="VjQ-Vq-Juk" secondAttribute="bottom" constant="8" id="Efa-up-L4G"/>
+                                            <constraint firstAttribute="trailing" secondItem="VjQ-Vq-Juk" secondAttribute="trailing" constant="16" id="LAe-Ke-SQ2"/>
+                                            <constraint firstItem="Ygk-kg-fuS" firstAttribute="top" secondItem="VjQ-Vq-Juk" secondAttribute="bottom" constant="57" id="Qoh-u5-Kqc"/>
+                                            <constraint firstAttribute="height" constant="523" id="aXY-kj-aR2"/>
+                                            <constraint firstItem="VjQ-Vq-Juk" firstAttribute="top" secondItem="HJA-5n-4Ac" secondAttribute="top" constant="72" id="hAr-wi-pIq"/>
+                                            <constraint firstItem="IxP-IK-rXe" firstAttribute="leading" secondItem="HJA-5n-4Ac" secondAttribute="leading" constant="16" id="hMk-1q-R8T"/>
+                                            <constraint firstAttribute="trailing" secondItem="Pto-PO-fLI" secondAttribute="trailing" constant="16" id="w43-Hr-tjG"/>
+                                            <constraint firstItem="Pto-PO-fLI" firstAttribute="top" secondItem="IxP-IK-rXe" secondAttribute="bottom" constant="16" id="wj0-AI-3Is"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="centerX" secondItem="HJA-5n-4Ac" secondAttribute="centerX" id="0jx-vG-Qdi"/>
+                                    <constraint firstItem="HJA-5n-4Ac" firstAttribute="leading" secondItem="mva-4N-u0m" secondAttribute="leading" id="1Da-rE-dwU"/>
+                                    <constraint firstItem="HJA-5n-4Ac" firstAttribute="leading" secondItem="mva-4N-u0m" secondAttribute="leading" id="2cc-6R-YPT"/>
+                                    <constraint firstAttribute="trailing" secondItem="HJA-5n-4Ac" secondAttribute="trailing" id="HcF-C5-87v"/>
+                                    <constraint firstAttribute="trailing" secondItem="HJA-5n-4Ac" secondAttribute="trailing" id="VNs-Jt-7d1"/>
+                                    <constraint firstAttribute="bottom" secondItem="HJA-5n-4Ac" secondAttribute="bottom" id="iNj-nu-BBr"/>
+                                    <constraint firstItem="HJA-5n-4Ac" firstAttribute="top" secondItem="mva-4N-u0m" secondAttribute="top" id="qqr-iE-59N"/>
+                                    <constraint firstItem="HJA-5n-4Ac" firstAttribute="top" secondItem="mva-4N-u0m" secondAttribute="top" id="y9Q-OW-5FO"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="mva-4N-u0m" secondAttribute="trailing" id="3m9-cH-utf"/>
+                            <constraint firstItem="mva-4N-u0m" firstAttribute="leading" secondItem="cYA-y6-c35" secondAttribute="leading" id="AhG-Mq-SfT"/>
+                            <constraint firstItem="ZDL-oP-qch" firstAttribute="top" secondItem="mva-4N-u0m" secondAttribute="bottom" id="Ifn-DY-CaV"/>
+                            <constraint firstItem="mva-4N-u0m" firstAttribute="top" secondItem="cYA-y6-c35" secondAttribute="top" id="iyY-sk-46p"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Demo RTSP" id="ywR-dq-KHj"/>
+                    <connections>
+                        <outlet property="linkTextField" destination="Pto-PO-fLI" id="RNj-5I-0GI"/>
+                        <outlet property="scrollView" destination="mva-4N-u0m" id="qpL-gy-0Py"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1123" y="288"/>
+        </scene>
+        <!--RTSP stream-->
+        <scene sceneID="CXu-GM-eDR">
+            <objects>
+                <viewController storyboardIdentifier="detailedPhotoView" id="bfT-tc-ZZ5" customClass="GiropticPhotoPreviewVC" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Ozm-V8-wZ8"/>
+                        <viewControllerLayoutGuide type="bottom" id="EOQ-hk-07G"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="qI6-5j-NAF" customClass="GLKView">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lOa-4B-TGs" userLabel="BottomBar - UIView">
+                                <rect key="frame" x="0.0" y="551" width="600" height="49"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="atD-Ad-TOZ" userLabel="Gyroscope - UIButton">
+                                        <rect key="frame" x="501" y="10" width="30" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="5oT-XK-Rdv"/>
+                                            <constraint firstAttribute="width" constant="30" id="NGm-hn-TXT"/>
+                                        </constraints>
+                                        <state key="normal" title="Gyroscope" image="Gyro">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="gyroscopeButtonPress:" destination="bfT-tc-ZZ5" eventType="touchUpInside" id="hwi-e3-EWb"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vKS-G7-5NA" userLabel="PlanarMode - UIButton">
+                                        <rect key="frame" x="539" y="10" width="45" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="Jyl-fR-WuZ"/>
+                                            <constraint firstAttribute="width" constant="45" id="zid-gC-S6b"/>
+                                        </constraints>
+                                        <state key="normal" image="PANO">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="panoramaButtonPress:" destination="bfT-tc-ZZ5" eventType="touchUpInside" id="H2L-Kd-2cC"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A7R-Nl-vRG" userLabel="LittlePlanet - UIButton">
+                                        <rect key="frame" x="461" y="10" width="32" height="32"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <state key="normal" image="earth">
+                                            <color key="titleColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <state key="selected" image="ActiveLittlePlanit"/>
+                                        <connections>
+                                            <action selector="switchModeButtonPress:" destination="bfT-tc-ZZ5" eventType="touchUpInside" id="kgn-fq-cCq"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.10000000000000001" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="vKS-G7-5NA" firstAttribute="top" secondItem="lOa-4B-TGs" secondAttribute="top" constant="10" id="0qk-PD-Vz0"/>
+                                    <constraint firstItem="atD-Ad-TOZ" firstAttribute="top" secondItem="lOa-4B-TGs" secondAttribute="top" constant="10" id="Ijy-wM-deB"/>
+                                    <constraint firstItem="A7R-Nl-vRG" firstAttribute="top" secondItem="lOa-4B-TGs" secondAttribute="top" constant="10" id="Pls-F5-CnP"/>
+                                    <constraint firstAttribute="height" constant="49" id="TLg-No-HLn"/>
+                                    <constraint firstAttribute="trailing" secondItem="vKS-G7-5NA" secondAttribute="trailing" constant="16" id="YX3-NB-sTe"/>
+                                    <constraint firstItem="vKS-G7-5NA" firstAttribute="leading" secondItem="A7R-Nl-vRG" secondAttribute="trailing" constant="46" id="cFS-6f-rMr"/>
+                                    <constraint firstItem="vKS-G7-5NA" firstAttribute="leading" secondItem="atD-Ad-TOZ" secondAttribute="trailing" constant="8" id="luT-i1-dYX"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OKI-oo-Ib3" userLabel="TopBar - UIView">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="64"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bag-6d-dQh" userLabel="Close - UIButton">
+                                        <rect key="frame" x="554" y="27" width="30" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="WpG-aQ-Chw"/>
+                                            <constraint firstAttribute="width" constant="30" id="auR-VP-7Hb"/>
+                                        </constraints>
+                                        <state key="normal" image="Close">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="backButtonPress:" destination="bfT-tc-ZZ5" eventType="touchUpInside" id="ETb-5O-U40"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.10000000000000001" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="CoL-vx-AOq"/>
+                                    <constraint firstAttribute="bottom" secondItem="bag-6d-dQh" secondAttribute="bottom" constant="7" id="PWO-Pz-J1f"/>
+                                    <constraint firstAttribute="trailing" secondItem="bag-6d-dQh" secondAttribute="trailing" constant="16" id="wgO-NE-Ikv"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="lOa-4B-TGs" secondAttribute="trailing" id="0bD-Lu-6af"/>
+                            <constraint firstItem="EOQ-hk-07G" firstAttribute="top" secondItem="lOa-4B-TGs" secondAttribute="bottom" id="9my-8v-4nX"/>
+                            <constraint firstAttribute="trailing" secondItem="OKI-oo-Ib3" secondAttribute="trailing" id="CQX-XV-1Bg"/>
+                            <constraint firstItem="lOa-4B-TGs" firstAttribute="leading" secondItem="qI6-5j-NAF" secondAttribute="leading" id="K4L-VY-cOV"/>
+                            <constraint firstItem="OKI-oo-Ib3" firstAttribute="top" secondItem="qI6-5j-NAF" secondAttribute="top" id="Xpp-rw-J1U"/>
+                            <constraint firstItem="OKI-oo-Ib3" firstAttribute="leading" secondItem="qI6-5j-NAF" secondAttribute="leading" id="xAM-gP-OG5"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="RTSP stream" id="eT9-8O-fOF"/>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="600" height="600"/>
+                    <connections>
+                        <outlet property="bottomOffcetForCloseButtonConstraint" destination="PWO-Pz-J1f" id="P1J-5h-bsK"/>
+                        <outlet property="bottomView" destination="lOa-4B-TGs" id="Cp0-o7-ctu"/>
+                        <outlet property="bottomViewHeightConstraint" destination="TLg-No-HLn" id="755-Sr-Bmw"/>
+                        <outlet property="closeButton" destination="bag-6d-dQh" id="soW-ZD-ZBC"/>
+                        <outlet property="gyroButton" destination="atD-Ad-TOZ" id="IAe-vY-Mt9"/>
+                        <outlet property="littlePlanetButtonTralingConstraint" destination="cFS-6f-rMr" id="0R2-5b-ZTI"/>
+                        <outlet property="topView" destination="OKI-oo-Ib3" id="Oja-Vo-WOP"/>
+                        <outlet property="topViewHeightConstraint" destination="CoL-vx-AOq" id="7T2-LA-dmr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="E9e-LI-16C" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1808" y="288"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="vVx-Fo-v9v">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="CoS-CE-vwB" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Vch-RB-emz">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="4XU-GG-uMO"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aDc-7m-Nnx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="341" y="288"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="ActiveLittlePlanit" width="100" height="100"/>
+        <image name="Close" width="64" height="64"/>
+        <image name="Gyro" width="36" height="36"/>
+        <image name="PANO" width="59" height="36"/>
+        <image name="earth" width="32" height="32"/>
+    </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="oCa-aV-vPy"/>
+    </inferredMetricsTieBreakers>
+</document>
